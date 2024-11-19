@@ -1,0 +1,110 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    /*border: 1px black solid;*/
+}
+
+a,
+li {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+#header1{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+#header1>ul >#point{
+    background-color: #f5ff6b;
+    align-content: center;
+}
+#header1>ul>li{
+    font-size: 13px;
+    align-items: center;
+    margin-right:20px;
+}
+
+#header1>ul{
+    display: flex;
+    justify-content: flex-end;
+}
+#header2>ul>li{
+    font-size: 13px;
+    align-items: center;
+    margin-right:5px;
+ 
+}
+#header2>ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+ 
+}
+#header2>ul>li>img{
+    margin-right:25px ;
+}
+#header2{
+    position: sticky;
+    top: 0px;/*고정할 위치*/
+    height: 50px;
+    z-index: 2;
+   
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+
+  
+}
+#header2 .submenu{
+    display: none; 
+    position: absolute; 
+    background-color:white;
+    font-size: 15px;
+    
+}
+
+#header2 > ul>.menu:hover .submenu{
+
+    display: block;
+}
+#searchbox{
+    border-bottom:3px solid black;
+    display: flex;
+    justify-content: end;
+    margin-left: 750px;
+    
+
+}
+#textbox{
+    border: none;
+}
+/*본문*/
+#listitem{
+
+}
+#bestlist{
+    
+    display: flex;
+    
+
+}
+
+
+/*푸터*/
+
+#footer1{
+    background-color: #eeeeee;
+}
+#footer1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    font-size: 14px;
+}
+#footer2{
+  text-align: center;
+  color: lightslategrey;
+}

@@ -1,0 +1,168 @@
+<!--
+HTML 종합 과제
+    -ooo업체의 설문지 만들기
+        -예] 삼성병원 , 스타벅스 , 가스점검설문 등등
+    -필수 요구사항
+    1. 상단(유사한 로고/이미지 또는 업체명) 넣어주세요.
+    2. 설문자의 이름 입력 받아주세요.
+    3. 5개이상으로
+        ex) ooo의료진은 친절했나요?
+    4. 질문에 대한 응답 체크박스 만들기, 1개 이상 포함
+        ex) 만족도를  O 5점 4점 3점 2점 1점
+    5. 건의사항은 긴글로 받아주세요.
+    6. 설문날짜랑 시간도 받아주세요.
+    7. 제출 버튼 만들어주세요.
+    8. HTML위주로 구축하되 추가적인 마크업과 디자인 알아서 꾸미기
+
+    제출방법
+        1.  A4 종이에 본인이 구현할 HTML을 스케치 해서 A4 종이 제출
+        2. 구현된 HTML의 라이브서버로 카카오톡방 제출
+
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>종합과제</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <fieldset>   
+        <img src="다운로드.jpg"/>
+        <legend>  <h1>만족도 조사</h1></legend>
+        <br>
+        <label>이름</label>
+        <input type="text">
+        <br>
+        <br>
+        <label>설문 날짜</label>
+        <input type="date">
+        <label>설문 시간</label>
+        <input type="time">
+        <br>
+        <ol>
+            <li>저희 병원은 어떻게 알고 오셨나요?</li>
+            <input type ="checkbox" name = know> 지인소개
+            <input type ="checkbox" name =know> 블로그
+            <input type ="checkbox" name = know> SNS
+            <input type ="checkbox" name = know> 간판보고
+            <input type ="checkbox" name = know> 기타
+            <input type = "text">
+            <li>방문 수단을 선택해주세요.</li>
+            <input type ="checkbox" name = method> 대중교통
+            <input type ="checkbox" name =method> 도보
+            <input type ="checkbox" name = method> 자가용
+            <input type ="checkbox" name = know> 기타
+            <input type = "text">
+            <li>소요 시간을 작성해주세요.</li>
+            <input type = "text" placeholder="약 10분">
+            <li>설문내용</li>
+            <table border="1">
+                <thead>
+                   <tr>
+                    <th>
+                        내용
+                    </th>
+                    <th>
+                        좋다
+                    </th>
+                    <th>
+                        좋은편이다
+                    </th>
+                    <th>
+                        보통이다
+                    </th>
+                    <th>
+                        별로인편이다
+                    </th>
+                    <th>
+                        별로다
+                    </th>
+                    
+                   </tr>
+
+                </thead>
+                <tbody>
+                    <tr> <td>
+                        의사는 친절한가요?
+                    </td>
+
+                    <td>
+                        <input type = "radio"name ="1" >
+                    </td>
+                    <td>
+                        <input type = "radio"name ="1">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="1">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="1">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="1">
+                    </td></tr>
+                    <tr> <td>
+                        병원시설은 어떠한가요?
+                    </td>
+
+                    <td>
+                        <input type = "radio"name ="2">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="2">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="2">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="2">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="2">
+                    </td></tr>
+                   
+                    <tr> <td>
+                        재방문의사는 어떠한가요?
+                    </td>
+
+                    <td>
+                        <input type = "radio" name ="3">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="3">
+                    </td>
+                    <td>
+                        <input type = "radio" name ="3">
+                    </td>
+                    <td>
+                        <input type = "radio" name="3">
+                    </td>
+                    <td>
+                        <input type = "radio"name ="3">
+                    </td></tr>
+                   
+                   
+                   
+                </tbody>
+            </table>
+            <li>건의 사항을 적어주세요</li>
+            <textarea rows="10" cols="72"></textarea>
+            <li>소중한 시간 내주셔서 감사합니다.</li>
+            <input type="button" value="제출하기">
+           
+        </ol>
+
+    
+    
+        
+        </fieldset>
+ 
+</body>
+</html>

@@ -1,0 +1,46 @@
+/*구역 구분 확인용*/
+
+* {/*기본 여백값 모두 제거*/
+    padding: 0px;
+    margin: 0px;
+}
+.product{
+    border: 1px solid #eeeeee;
+    width:300px;
+    margin: 10px;
+}
+
+.img {
+    height: 250px;
+    width: 300px;
+    border-bottom: 1px solid #eeeeee;
+}
+.name{
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.price{ font-size: 14px;
+    padding: 5px;
+    padding-bottom:5px;
+    margin-top: 15px;
+    }
+
+.content {
+    padding: 5px;
+    height: 70px;
+    width: 300px;
+    
+}
+.review{ padding: 5px;
+    }
+
+
+
+.high {
+    color: orange;
+    font-weight: bolder;
+    font-size: 20px;
+
+}

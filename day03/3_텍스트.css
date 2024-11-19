@@ -1,0 +1,61 @@
+/*
+    CSS 주석
+     
+*/
+/*
+    css 기본구조
+        선택자{ 속성명 : 속성값; }
+        어디에{ 무엇을 : 어떻게; }
+*/
+/* 'title'이라는 클래스 이름을 가지니 마크업 꾸미기 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title {
+    font-family: "궁서", "굴림";
+    /* 글꼴 : 사용자 PC에 설치된 글꼴만 가능 */
+    font-size: 30px;
+    /* 글꼴 크기 , px(픽셀) */
+    font-style: italic;
+    /* 글꼴 기울기 */
+    font-weight: bold;
+    /* 글꼴 진하게 , h3 마크업은 기본적으로 진하게 포함 */
+
+
+
+
+}
+
+.content {
+    /* 웹폰트(눈누 vs 구글) : 폰트제공하는 서버로부터 글꼴 사용 */
+    font-family: 'GmarketSansMedium', '맑은 고딕';
+    color: gold;
+    /* 글꼴 색상 */
+    word-spacing: 5px;
+    /* 단어 간격 : 어간 */
+    letter-spacing: 2px;
+    /* 글자 간격 : 자간 */
+    line-height: 160%;
+    /* 줄간격 , %단위*/
+}
+
+.writer {
+    text-align: center;
+    /* 텍스트 가로 정렬, left , right , center*/
+    text-decoration: underline, overline, line-through;
+    /* 텍스트 선긋기 : underline(밑줄), overline(윗줄), line-through */
+    text-shadow: 0px 0px 10px red;
+    /* 텍스트 그림자 : x축, y축 흐림 정도 색상*/
+    color: red;
+    color : #ff0000;
+    color : rgb(255,0,0);
+    /* 색상 : 1.색상명 2.RGB색상[0~255] 3.헥사코드[16진수]*/
+
+}
+
+/*
+*/

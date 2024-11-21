@@ -206,6 +206,14 @@ li{
 .blank{
     font-size: 5px;
 }
+.fixedbox{
+    position: fixed;
+    bottom:0px;
+    right:0px;
+    
+    margin: 0px auto;
+    
+    }
 
 /*푸터*/
 

@@ -1,7 +1,18 @@
-#mg_main {
+@import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+*{  
+    /*border: 1px solid black;*/
+    padding : 0px; margin : 0px;
+}
+a{ color: black; text-decoration: none;}
+li{ list-style-type: none;}
+
+body{ font-family: "Noto Sans KR";}
+
+#mg_main{
     width: 1200px;
     margin: 0px auto;
-    border: 1px solid black;
+
 }
 
 li {
@@ -16,18 +27,87 @@ a {
 }
 
 .mg_main_img{
-    margin-left: 5px }
+    margin-left: 5px; 
+margin-top: 50px;}
+ 
 #mg_mainbot {
     display: flex;
     justify-content: center;
     color:#6974a3;
     font-size: 13px;
+    margin-bottom: 61px;
 
 }
 #mg_mainbot>span {
     color:#051766;
-    margin-right: 5px;
-    font-size: 14px;
+    margin-right: 10px;
+    font-size: 13px;
     margin-left: 5px;
 
+  
 }
+#mg_main1>h1{
+    font-weight:400;
+    font-size:38px
+}
+/*main아이템*/
+.main2_item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 1350px;
+    margin-bottom: 50px;
+    
+}
+.item_part{
+    width: 378.6px;
+}
+
+.listname{
+    font-size: 38px;
+    font-weight:400;
+    margin: 24px 0px 16px;
+}
+.list_disc{
+    color:#555;
+    font-size: 16px;
+}
+
+/*공지사항*/
+.notice_start{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
+    padding-bottom:24px;
+   
+   
+
+}
+
+.notice_list{
+   padding: 24px 12px;
+   border-top:  solid#d9d9d9;
+   border-bottom: 1px solid #d9d9d9;
+   color: #555555;
+   padding-left: 30px;
+   
+}
+.notice_list>span{
+    text-align: end;
+    justify-content: end;
+}
+.noticepoint{
+    background-color: #f7f7f7;
+}
+#noticepoint1{
+    border-top: 1px solid black ;
+}
+#noticepoint2{
+    text-decoration: underline;
+}
+#noticepoint2:active{
+    color: black;
+    
+}
+

@@ -1,0 +1,18 @@
+#mg_main{width: 1200px;}
+
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
+a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+#mg_main1{
+    margin: 0px auto;
+}
+#mg_mainbot{
+    margin: 0px auto;
+    justify-content: center;
+}

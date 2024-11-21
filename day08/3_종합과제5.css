@@ -1,18 +1,33 @@
-#mg_main{width: 1200px;}
+#mg_main {
+    width: 1200px;
+    margin: 0px auto;
+    border: 1px solid black;
+}
 
-li{
+li {
     list-style-type: none;
     text-decoration: none;
 }
+
 a {
     list-style-type: none;
     text-decoration: none;
     color: black;
 }
-#mg_main1{
-    margin: 0px auto;
-}
-#mg_mainbot{
-    margin: 0px auto;
+
+.mg_main_img{
+    margin-left: 5px }
+#mg_mainbot {
+    display: flex;
     justify-content: center;
+    color:#6974a3;
+    font-size: 13px;
+
+}
+#mg_mainbot>span {
+    color:#051766;
+    margin-right: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+
 }

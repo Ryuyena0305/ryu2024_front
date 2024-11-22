@@ -9,7 +9,7 @@ li{ list-style-type: none;}
 
 body{ font-family: "Noto Sans KR";}
 
-#mg_main{
+#membe_main{
     width: 1200px;
     margin: 0px auto;
 
@@ -28,5 +28,49 @@ a {
 
 #membe_main1>h1{
     font-weight:400;
-    font-size:41px
+    font-size:41px;
+    margin-bottom: 42px;
+    margin-top: 70px;
+}
+.membe_box_img{
+    width: 480px;
+    height: 290px;
+}
+.membe_box1_flex{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    box-shadow:5px;
+    height: 270px;
+    padding : 40px 48px;
+    align-items: center;
+    margin-top: 20px;
+}
+.membe_box_btn{
+    width: 160px;
+    height: 48px;
+    background-color: #00256C;
+    border-radius: 30px;
+    color:white;
+    font-size:15px;
+    font-weight:1000;
+    margin-top: 50px;
+}
+.membe_box1_title{
+    font-size:28px;
+    margin-bottom: 5px;
+}
+.membe_box1_detail{
+    font-size:16px;
+    color: #555555;
+}
+
+/* 메인 박스 밑 본문 */
+.membe_main2{
+    border: 1;
+}
+.membe_main_box{
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
 }

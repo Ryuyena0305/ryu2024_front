@@ -49,12 +49,12 @@ a {
     
 }
 .membe_box_btn{
-    width: 160px;
+    width: 174px;
     height: 48px;
     background-color: #00256C;
     border-radius: 30px;
     color:white;
-    font-size:15px;
+    font-size:16px;
     font-weight:1000;
     margin-top: 50px;
 }
@@ -79,12 +79,26 @@ a {
     height: 145px;
     
 }
+.membe_main_box_plus{
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 584px;
+    height: 145px;
+
+}
 .membe_main_box1>li{
     align-content: center;
+}
+.membe_box1{width: 350px;
+
 }
 .membe_main_box1{
     display: flex;
     margin: 25px;
+    
 
 }
 .membe_main_box2{
@@ -103,8 +117,9 @@ a {
 }
 .membe_main_box_flex{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 80px;
+    gap: 25px;
 
 
 }
@@ -121,6 +136,7 @@ a {
 .membe_main_box1_detail{
     color: #555555;
 
+    
 }
 .detailbtn{
     font-size: 18px;

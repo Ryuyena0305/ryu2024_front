@@ -114,10 +114,11 @@
 
 // [지문7] prompt 함수로 정수를 입력받아 입력받은 값이 홀수 이면서 7배수 이면 true / 아니면 false 로 console탭에 출력하시오.
 // let num3 =Number(prompt('정수3를 입력하세요'));
-// console.log(num3%2==1&&num3%7==0);
+// let num3_result = num3%2==1&&num3%7==0
+// console.log(`[7] 비교결과 : ${num3_result}`);
 
 // [지문8] prompt 함수로 십만원 단위의 금액을 입력받아 입력받은 금액의 지폐수를 console탭에 출력하시오.
-    // -> 입력 예] 356789 입력시 , 출력 예] 십만원:3장 만원:5장 천원6장 
-// let num4 =Number(prompt('삽만원 단위의 금액을  입력하세요'));
-// console.log(`십만원:${parseInt(num4/100000)}장 만원:${parseInt((num4%100000)/10000)}장 천원${parseInt((num4%10000)/1000)}장` )
+//-> 입력 예] 356789 입력시 , 출력 예] 십만원:3장 만원:5장 천원6장 
+let num4 =Number(prompt('삽만원 단위의 금액을  입력하세요'));
+console.log(`십만원:${parseInt(num4/100000)}장 만원:${parseInt((num4%100000)/10000)}장 천원${parseInt((num4%10000)/1000)}장` )
 

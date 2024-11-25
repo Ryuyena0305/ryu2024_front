@@ -513,6 +513,7 @@ body {
   width: 1280px;
   height: 730px;
   margin: 0px auto;
+  border-radius: 40px;
 
 }
 
@@ -599,6 +600,8 @@ body {
 .logmain_right {
   margin: 0px auto;
   margin-left: 80px;
+  width: 427px;
+  height: 609px;
 }
 
 .logmain_idorkey {
@@ -652,7 +655,8 @@ body {
 
 }
 
-.logmain_id>span {}
+.logmain_id>span {
+}
 
 .logmain_idbox>input:hover {
   border: 1px solid #0c5aeb;
@@ -680,14 +684,16 @@ body {
 
 }
 
-.idcheckbox>input {
-  border-color: #00256C;
+.idcheckbox>input{
 
- 
+  zoom: 1.5;
+  background-color: #00256C;
+
 }
 
 .logmain_idsto {
   margin-top: 20px;
+ 
 }
 
 .logmain_login_btn>a>input:hover {
@@ -706,7 +712,11 @@ body {
   margin-top: 40px;
   border: none;
   border-radius: 10px;
-}
+} 
+.logmain_searchlist:hover{
+  border: 1px solid #0c5aeb;
+  border-radius: 5px;}
+
 
 .logmain_search {
   display: flex;

@@ -41,3 +41,4 @@ for(;;){//(1) 무한입력
     }
 
 }
+console.log(numArray);

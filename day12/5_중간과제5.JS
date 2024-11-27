@@ -11,20 +11,22 @@
     청설                 ★★★★★★☆☆☆☆
 
     */
-let movieNames = ['히든페이스 ', '위키드', '글래디에이터2', '청설'];
-movieRating = [8, 4, 7, 6];
-for (let index = 0; index <= movieNames.length-1; index++) {
-    document.write(`${movieNames[index]}  `);
-    for (let i = index; i <= movieRating[index]; i++) {
-        document.write('★');
-    }
-    for(let j = 1; j<= 10-movieRating[index];j++){
-        document.write('☆');
-    }
-    document.write(`<br/>`);
+    let movieNames = ['히든페이스' , '위키드' , '글래디에이터2' , '청설' ]
+    let movieRating = [8,4,7,6]
 
-
-}
+    for (let index = 0; index <= movieNames.length - 1; index++) { 
+        outHTML += `<div>${movieNames[index]}`  
+        let rateHTML = ``
+        for (let score = 1; score <= 10; score++) {
+            if (score <= movieRating[index]) { pointHTML += `★` } 
+            else { rateHTML += `☆` } 
+        } 
+        outHTML += `${pointHTML}</div>`;
+        console.log(outHTML);
+    
+    } 
+    document.write(outHTML)
+    
 
 
 /*

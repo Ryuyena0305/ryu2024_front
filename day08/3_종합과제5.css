@@ -384,8 +384,6 @@ a {
   margin-right: 10px;
   font-size: 13px;
   margin-left: 5px;
-
-
 }
 
 #mg_main1>h1 {
@@ -397,11 +395,10 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 1200px;
   height: 1350px;
   margin-bottom: 50px;
-
 }
-
 .item_part {
   width: 378.6px;
 }
@@ -436,9 +433,6 @@ a {
   border-bottom: 1px solid #d9d9d9;
   color: #555555;
   padding-left: 30px;
-
-
-
 }
 
 .notice_list>a {

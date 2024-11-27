@@ -13,7 +13,7 @@
     */
 let movieNames = ['히든페이스 ', '위키드', '글래디에이터2', '청설'];
 movieRating = [8, 4, 7, 6];
-for (let index = 0; index <= movieNames.length; index++) {
+for (let index = 0; index <= movieNames.length-1; index++) {
     document.write(`${movieNames[index]}  `);
     for (let i = index; i <= movieRating[index]; i++) {
         document.write('★');

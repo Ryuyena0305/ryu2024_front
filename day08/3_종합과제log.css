@@ -515,15 +515,12 @@ body {
   font-size: 30px;
   z-index: 80;
   background-position: center top;
-
-
 }
+
 .backgroundcolorset { /*부모클래스*/
   background-color: #f8f9fc;
   height: 1023px;
   position: relative;
-
-
 }
 
 .backgroundcolor_title{/*자식클래스*/
@@ -536,10 +533,9 @@ body {
   top:10px;
   right:380px;
   left : 300px;
-
 }
 
-.logmainbox {
+.logmainbox {/*자식클래스*/
   background-color: white;
   box-shadow: 5px 5px 15px #9c9c9c52;
   width: 1280px;

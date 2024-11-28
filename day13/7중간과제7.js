@@ -9,6 +9,7 @@
 
     let id_list = []
     let pw_list = []
+    let html=''
 
     function 등록함수() {
         console.log('등록함수 실행');
@@ -21,14 +22,21 @@
         id_list.push(id);      
         pw_list.push(pw); 
       
-        출력함수(); 
     
     }
+    등록함수();
     function 출력함수(){
-        let index=0
-        if (id_list[index]==pw[index]){
+
+        for(let index=0;index<=id_list.length-1;index++)
+        if (id_list[index]==document.querySelector(&&pw_list[index]==pwInput){
+            html+= `로그인 성공`
             
         }
+        else{
+             html+= `로그인 실패`
+        }
+        return document.write(html);
 
 
     } 
+    출력함수();

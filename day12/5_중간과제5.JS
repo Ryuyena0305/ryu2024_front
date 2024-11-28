@@ -13,21 +13,24 @@
     */
     let movieNames = ['히든페이스' , '위키드' , '글래디에이터2' , '청설' ]
     let movieRating = [8,4,7,6]
-
-    for (let index = 0; index <= movieNames.length - 1; index++) { 
+    
+   
+    let outHTML = '';
+  
+    for (let index = 0; index <= movieNames.length - 1; index++) {
+    
+    
         outHTML += `<div>${movieNames[index]}`  
-        let rateHTML = ``
-        for (let score = 1; score <= 10; score++) {
-            if (score <= movieRating[index]) { pointHTML += `★` } 
-            else { rateHTML += `☆` } 
-        } 
+        let pointHTML = `       ` 
+        for (let point = 1; point <= 10; point++) {
+            if (point <= movieRating[index]) { pointHTML += `★` } 
+            else { pointHTML += `☆` } 
+        }
+       
         outHTML += `${pointHTML}</div>`;
         console.log(outHTML);
-    
     } 
     document.write(outHTML)
-    
-
 
 /*
 [ 문제2 ] 6개 시트/좌석 이 존재하는 좌석 상태 출력하시오.

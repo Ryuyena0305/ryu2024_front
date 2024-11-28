@@ -83,7 +83,14 @@ function 등록함수(){
     
     //2. 처리 , 입력받은 값들과 날짜/조회수 하나의 문자열(CSV)구성 ->배열 저장
     //사용자에게 입력받지 않고 로직에서 초기화 해주는 변수
-    let date = '2024-11-28';//작성일, 일반적으로 게시물 등록시 현재 시스템 날짜를 사용
+
+    // - 현재 날짜/시간 기능을 제공하는 객체를 변수에 저장
+    let nowDate = new Date();
+    let nowYear = nowDate.getFullYear();//현재 연도
+    let nowMonth = nowDate.getMonth()+1;//현재 월
+    let nowDay = nowDate.getDate();
+    let date = `${nowYear}-${nowMonth}-${nowDay}`;//작성일, 일반적으로 게시물 등록시 현재 시스템 날짜를 사용
+    console.log(date);
     let view=0; //조회수, 일반적으로 게시물 등록시 게시물 조회수는 0부터 시작
 
     //(2) 5개의 변수들을 하나의 (csv형식) 문자열로 구성
@@ -100,8 +107,25 @@ function 등록함수(){
 
 
 //[3] 출력함수 , 실행조건 : js 열렸을 때 최초 1번 실행, 등록/삭제/수정 처리 성공시 실행
+출력함수(); //<-- JS가 실행될 때 최초로 1번만 실행
 function 출력함수(){
-    console.log(게시물목록);
+    //(1) 어디에 , table >tbody>document.querySelector(선택자).value
+    let tbody = document.querySelector('table>tbody');
+    //(2) 무엇을 , 배열 요소들의 정보를 HTML 구성해서
+    let html = ``;
+        //배열내 요소 순회(배열내 모드느 요소를 반복해서 하나씩 꺼내기)
+
+        for(let index=0;index<=게시물목록.length-1;index++){
+            let board = 게시물목록[index]; //하나의 게시물
+           
+            let info = board.split(',');//csv형식은 ,(쉼표)로 구분했기 때문에 (쉼표) 다시 분해한다.
+            //info[0] = 제목, info[1] = 내용, info[2] = 비밀번호, info[3] = 날짜 info[4] = 조회수
+            //각 정보들을 HTML과 연동해서 작성하기
+            html += `<tr><td>${info[3]}</td> <td>${info[0]}</td><td>${info[4]}</td></tr>`
+        }
+    //(3) 출력 , innerHTML
+    tbody.innerHTML = html; //변수 = 새로운값 , .변수 = 새로운값
+   
 }
 
 

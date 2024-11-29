@@ -112,12 +112,11 @@ function searchCar() {
   let time = `${hours}:${minutes}:${seconds}`
 
   let html = ''
-  let price=''
 
   for (let index = 0; index <= carInfo.length - 1; index++) {
     let board = carInfo[index];
 
-
+    let content = document.querySelector("#outBox");
     let carlist = board.split(',')
     console.log(carInfo)
     document.querySelector('.carLocation').innerHTML = carlist[0];
@@ -125,7 +124,7 @@ function searchCar() {
     document.querySelector('.inCarTime').innerHTML = carlist[2]; 
     document.querySelector('.outCarTime').innerHTML = time; 
     document.querySelector('.price').innerHTML = price;
-    /*html += `<h1>출차</h1>주차 위치 : <span class="carLocation">${carlist[0]}</span> <br />
+    content.innerHTML +=`<h1>출차</h1>주차 위치 : <span class="carLocation">${carlist[0]}</span> <br />
         차량 번호 : <input type="text" class="carNumber" placeholder='${carlist[1]}'> </span>
         <hr />
         입차 시간 : <span class="inCarTime">${carlist[2]} </span><br/>
@@ -134,7 +133,7 @@ function searchCar() {
         주차료(금액) : <span class="price">${price}</span>
         <div class="deleteBox">
         <button onclick="outCar(${index})" onclick="outCar"type="button">출차</button>
- `;*/
+ `;
 
   }
 

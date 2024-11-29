@@ -124,7 +124,7 @@ function searchCar() {
     document.querySelector('.inCarTime').innerHTML = carlist[2]; 
     document.querySelector('.outCarTime').innerHTML = time; 
     document.querySelector('.price').innerHTML = price;
-    content.innerHTML +=`<h1>출차</h1>주차 위치 : <span class="carLocation">${carlist[0]}</span> <br />
+    content +=`<h1>출차</h1>주차 위치 : <span class="carLocation">${carlist[0]}</span> <br />
         차량 번호 : <input type="text" class="carNumber" placeholder='${carlist[1]}'> </span>
         <hr />
         입차 시간 : <span class="inCarTime">${carlist[2]} </span><br/>

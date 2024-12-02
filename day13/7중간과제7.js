@@ -7,36 +7,50 @@
     강의 카카오톡방에 ip 링크 제출
  */
 
-    let id_list = []
-    let pw_list = []
-    let html=''
+    let login_list = ["bear0305,1234"]
 
+    let html = ''
+    
+    
+    
     function 등록함수() {
         console.log('등록함수 실행');
-       
-        let idInput = document.querySelector('.input_id');                          
-        let id = idInput.value;  
-        let pwInput = document.querySelector('.input_pw');                    
+        let idInput = document.querySelector('.input_id');
+        let id = idInput.value;
+        let pwInput = document.querySelector('.input_pw');
         let pw = pwInput.value;
-
-        id_list.push(id);      
-        pw_list.push(pw); 
-      
+    
+    
+        let board = `${id},${pw}`
+    
+        login_list.push(board);
+        console.log(login_list)
+    
     
     }
-    등록함수();
-    function 출력함수(){
-
-        for(let index=0;index<=id_list.length-1;index++)
-        if (id_list[index]==document.querySelector(&&pw_list[index]==pwInput){
-            html+= `로그인 성공`
+    function 출력함수() {
+        let idlogInput = document.querySelector('.log_id');
+        let checkLogId = idlogInput.value;
+        let pwlogInput = document.querySelector('.log_pw');
+        let checkLogPw = pwlogInput.value;
+    
+     let logSuccess = false;
+    
+        for (let index = 0; index < login_list.length; index++) {
+    
+            let [id, pw] = login_list[index].split(",");
             
+            if (checkLogId === id && checkLogPw === pw) {
+                logSuccess = true;
+                break;  
+            }
         }
-        else{
-             html+= `로그인 실패`
+    
+    
+        if (logSuccess) {
+            document.write("<h1>로그인 성공</h1>");
+        } else {
+            document.write("<h1>로그인 실패</h1>");
         }
-        return document.write(html);
-
-
+    
     } 
-    출력함수();

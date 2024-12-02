@@ -82,68 +82,106 @@ function outCar(index) {
 }
 
 function inCar() {
-  let carLocation = document.querySelector(".carLocation").value;
-  let carNum = document.querySelector("#carNumber").value;
+  let carLocation = document.querySelector(".carLocation").value; 
+  let carNum = document.querySelector("#carNumber").value; // ID를 기준으로 선택
+
+  let color = document.querySelector(`.${carLocation}`);
 
   if (carLocation === "none" || carNum === "") {
-    alert("주차 자리와 차량 번호를 모두 입력해주세요!");
-    return;
+      alert("주차 자리와 차량 번호를 모두 입력해주세요!");
+      return;
   }
 
-  let today = new Date();
-  let hours = today.getHours();
-  let minutes = today.getMinutes();
-  let seconds = today.getSeconds();
+  let today = new Date();   
+  let hours = today.getHours(); 
+  let minutes = today.getMinutes();  
+  let seconds = today.getSeconds();  
   let time = `${hours}:${minutes}:${seconds}`
 
   let board = `${carLocation}, ${carNum}, ${time}`;
+
+
+  for(let index = 0; index <= carInfo.length -1; index++){
+      let full = carInfo[index]
+      let info = full.split(',')
+      if(info[0] == carLocation){
+          alert("입차불가");
+          return;
+      }
+  }
+  alert("입차성공");
+  color.style.backgroundColor = 'red';
+
   carInfo.push(board);
   console.log(carInfo);
-
 }
 
 function searchCar() {
-
-  let tbody = document.querySelector('div');
+  let tbody = document.querySelector('#outBox');
   let today = new Date();
   let hours = today.getHours();
   let minutes = today.getMinutes();
   let seconds = today.getSeconds();
-  let time = `${hours}:${minutes}:${seconds}`
+  let time = `${hours}:${minutes}:${seconds}`;
+  tbody.innerHTML = '';
 
-  let html = ''
+  let price;
+  let html = '';
 
-  for (let index = 0; index <= carInfo.length - 1; index++) {
+ 
+  for (let index = 0; index < carInfo.length; index++) {
     let board = carInfo[index];
+    let carlist = board.split(',');
 
-    let content = document.querySelector("#outBox");
-    let carlist = board.split(',')
-    console.log(carInfo)
-    document.querySelector('.carLocation').innerHTML = carlist[0];
-    document.querySelector('.carNumber').innerHTML = carlist[1]; 
-    document.querySelector('.inCarTime').innerHTML = carlist[2]; 
-    document.querySelector('.outCarTime').innerHTML = time; 
-    document.querySelector('.price').innerHTML = price;
-    content +=`<h1>출차</h1>주차 위치 : <span class="carLocation">${carlist[0]}</span> <br />
-        차량 번호 : <input type="text" class="carNumber" placeholder='${carlist[1]}'> </span>
-        <hr />
-        입차 시간 : <span class="inCarTime">${carlist[2]} </span><br/>
-        출차 시간 : <span class="outCarTime"> ${time} </span>
-        <hr />
-        주차료(금액) : <span class="price">${price}</span>
-        <div class="deleteBox">
-        <button onclick="outCar(${index})" onclick="outCar"type="button">출차</button>
- `;
+    let carloc = carlist[0];
+    let inTime = carlist[2];
+    let calc_inTime = inTime.split(':');
 
+    let inHours = parseInt(calc_inTime[0]);
+    let inMinutes = parseInt(calc_inTime[1]);
+    let inSeconds = parseInt(calc_inTime[2]);
+
+    let outHours = hours;
+    let outMinutes = minutes;
+    let outSeconds = seconds;
+
+    let Second_calc = (outHours * 3600 + outMinutes * 60 + outSeconds) - (inHours * 3600 + inMinutes * 60 + inSeconds);
+    price = Second_calc * 100;
+
+
+    html += `<h1>출차</h1>
+      주차 위치 : <span class="carLocation">${carlist[0]}</span> <br />
+      차량 번호 : <input type="text" class="carNumber" placeholder='${carlist[1]}'> </span>
+      <hr />
+      입차 시간 : <span class="inCarTime">${carlist[2]}</span><br />
+      출차 시간 : <span class="outCarTime">${time}</span>
+      <hr />
+      주차료(금액) : <span class="price">${price}</span>
+      <div class="deleteBox">
+      <button onclick="outCar(${index})" type="button">출차</button>`;
   }
 
+  
   tbody.innerHTML = html;
 }
 
-function outCar(){
-  console.log( 'outCar 실행' );
-  console.log( index )
-  carInfo.splice( index , 1 ); 
- 
+function outCar(index) {
+  let tbody = document.querySelector('#outBox');
+  tbody.innerHTML = '';
+
+  carInfo.splice(index, 1);
+
+  searchCar();
+  alert('출차가 완료되었습니다.');
   console.log(carInfo);
+  html += `<h1>출차</h1>
+  주차 위치 : <span class="carLocation"></span> <br />
+  차량 번호 : <input type="text" class="carNumber" placeholder=''> </span>
+  <hr />
+  입차 시간 : <span class="inCarTime"></span><br />
+  출차 시간 : <span class="outCarTime"></span>
+  <hr />
+  주차료(금액) : <span class="price"></span>
+  <div class="deleteBox">
+  <button onclick="outCar()" type="button">출차</button>`;
 }

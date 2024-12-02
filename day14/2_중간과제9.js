@@ -106,6 +106,8 @@ function inCar() {
       let info = full.split(',')
       if(info[0] == carLocation){
           alert("입차불가");
+
+
           return;
       }
   }
@@ -167,11 +169,12 @@ function searchCar() {
 
 function outCar(index) {
   let tbody = document.querySelector('#outBox');
-  tbody.innerHTML = '';
+  let html=''
+  //tbody.innerHTML = '';
 
   carInfo.splice(index, 1);
 
-  searchCar();
+
   alert('출차가 완료되었습니다.');
   console.log(carInfo);
   html += `<h1>출차</h1>
@@ -184,4 +187,6 @@ function outCar(index) {
   주차료(금액) : <span class="price"></span>
   <div class="deleteBox">
   <button onclick="outCar()" type="button">출차</button>`;
+  
+  tbody.innerHTML=html;
 }

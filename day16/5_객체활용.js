@@ -131,7 +131,7 @@ function 평가등록출력(클릭된사원번호) { //매개변수 : 클릭된 
         console.log(html)
     //3. 출력
     div.innerHTML = html
-    
+
 
 }
 // function 점수등록(){

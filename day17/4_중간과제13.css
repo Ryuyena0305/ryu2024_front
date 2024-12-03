@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'Ownglyph_ParkDaHyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 #wrap{
     width:400px;
     margin: 0 auto;
+    font-family: 'Ownglyph_ParkDaHyun';
 }
 /**/
 #todoTop{
@@ -22,6 +30,7 @@
     background-color: lightpink;
     box-shadow: 0px 0px 3px rgb(255, 101, 125);
     border: none;
+    font-family: 'Ownglyph_ParkDaHyun';
 }
 /*할일 1개 구역 : 할일이 미완료일때*/
 .contentBox{
@@ -45,4 +54,5 @@
     border: none;
     border-radius: 2px;
     box-shadow: 0px 0px 3px rgb(255, 101, 125);
+    font-family: 'Ownglyph_ParkDaHyun';
 }

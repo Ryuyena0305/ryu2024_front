@@ -1,0 +1,48 @@
+#wrap{
+    width:400px;
+    margin: 0 auto;
+}
+/**/
+#todoTop{
+    display:flex;
+}
+/*2. 입력상자*/
+
+.contentInput{
+    width: 300px;
+    padding:10px;
+    border : none;
+    box-shadow: 0px 0px 3px rgb(255, 101, 125);
+}
+/* 3. 등록버튼 */
+
+.addBtn{
+    width : 100px;
+    padding: 10px;
+    background-color: lightpink;
+    box-shadow: 0px 0px 3px rgb(255, 101, 125);
+    border: none;
+}
+/*할일 1개 구역 : 할일이 미완료일때*/
+.contentBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:lightpink;
+    margin: 20px 0px;
+    padding : 15px 10px
+}
+/*할일 1개 구역 : 할일이 완료일때*/
+.success{
+    background-color: grey;
+    color : white;
+    
+}
+.success>.content{
+    text-decoration: line-through;
+}
+.updateBtn ,.deleteBtn{
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 0px 3px rgb(255, 101, 125);
+}

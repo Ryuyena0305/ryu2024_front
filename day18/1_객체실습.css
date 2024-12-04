@@ -8,6 +8,8 @@
 
 #wrap{
     font-family: 'Ownglyph_ParkDaHyun';
+    width: 1100px;
+    margin: 0px auto;
 }
 #calTop{
     display: flex;

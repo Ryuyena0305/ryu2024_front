@@ -1,27 +1,37 @@
-#wrap{width: 400px;
-margin: 0 auto;}
+#wrap{
+    width: 400px;
+    margin: 0 auto;
+}
 #todoTop{
-    display: flex;
+    display: flex; 
 }
-
-#contentInput{
-  
-    width:300px;
-    padding: 10px;
+.todoInput{
+    width: 300px;
+    border:none;
     margin-bottom: 5px;
+    box-shadow: 0px 0px 3px lightpink;
+    padding: 10px;
+    
 }
-#addBtn{
+.inputBtn{
     width: 100px;
     margin-bottom: 5px;
+    box-shadow: 0px 0px 3px deeppink;
+    background-color: lightpink;
+    border: none;
+}
+.updateBtn, .deleteBtn{
+    box-shadow: 0px 0px 3px lightpink;
+    border: none;
 }
 .contentBox{
-    display:flex;
+    display: flex;
     justify-content: space-between;
-    padding:10px;
-    margin-bottom:5px
-}
-.contentBox{
-    background-color: lightcoral;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: pink;
+
 }
 .success{
     background-color: grey;

@@ -1,0 +1,32 @@
+#wrap{width: 400px;
+margin: 0 auto;}
+#todoTop{
+    display: flex;
+}
+
+#contentInput{
+  
+    width:300px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+#addBtn{
+    width: 100px;
+    margin-bottom: 5px;
+}
+.contentBox{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+    margin-bottom:5px
+}
+.contentBox{
+    background-color: lightcoral;
+}
+.success{
+    background-color: grey;
+    color: white;
+}
+.success>.content{
+    text-decoration: line-through;
+}

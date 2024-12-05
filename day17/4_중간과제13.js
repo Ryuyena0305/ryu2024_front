@@ -69,8 +69,8 @@ function 전체출력함수(){
         html +=`<div class="contentBox ${info.할일상태==true?'success':''}">
                 <div class="content">${info.할일내용}</div>
                 <div class="contentBtns">
-                    <button class="updateBtn success1" onclick="수정함수(${info.할일코드})">수정¢</button>
-                    <button class="deleteBtn success1" onclick="삭제함수(${info.할일코드})">삭제£</button>
+                    <button class="updateBtn " onclick="수정함수(${info.할일코드})">수정¢</button>
+                    <button class="deleteBtn " onclick="삭제함수(${info.할일코드})">삭제£</button>
 
                 </div>
             </div>`

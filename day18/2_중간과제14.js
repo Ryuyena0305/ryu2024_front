@@ -9,6 +9,7 @@ let 재고목록 = [
     { 도서번호: 2, 도서개수: 2, 입고날짜: '2024-04-12' },
     { 도서번호: 3, 도서개수: 3, 입고날짜: '2024-03-12' }
 ]
+
 function 도서출력() {
 
     //1. 어디에
@@ -61,16 +62,18 @@ function 도서수정(클릭된도서번호) {
     for(let index =0;index<=도서목록.length-1;index++){
 
         let info=도서목록[index];
+
         if(info.도서번호 == 클릭된도서번호){
             검색도서 = info;
-            console.log(검색도서)
             break;
         }
        
     }
     if(검색도서==null){
         alert('검색도서가 없습니다.');
-        return; 
+        console.log(검색도서)
+        return;
+    
     }
     
     let div = document.querySelector('#도서수정');
@@ -89,10 +92,10 @@ function 도서수정(클릭된도서번호) {
     margin-top: 10px;">수정</button>
 
         </form>`;
-        console.log(html)
+    
 
     div.innerHTML = html
-
+    도서출력();
    
 
 }
@@ -115,20 +118,14 @@ function 도서수정2(클릭된도서번호){
     }
     도서출력();
 
-    
-
-  
-    //= 입력받은걸 객체로 만들기
-
 }
 
 function 도서삭제(삭제할도서번호) {
     for(let index = 0; index<=도서목록.length-1;index++){
         if(도서목록[index].도서번호 == 삭제할도서번호){
-            //만일 index번째의 할일객체내 할일코드와 삭제할할일코드와 같으면
-                //2. 배열내 요속(객체)삭제, .splice(),인덱스 필요
-                도서목록.splice(index,1)//현재 찾은 index 요소를 삭제한다.
-                break; //삭제했을때 가장 가까운 반복문종료
+           
+                도서목록.splice(index,1)
+                break; 
 
         }
     }
@@ -138,14 +135,14 @@ function 도서삭제(삭제할도서번호) {
    
 }
 
-
+/**************************************************************************************************** */
+  
 function 재고출력() {
-    //1. 어디에
+
     let tbody = document.querySelector('.재고테이블');
 
-    //2. 무엇을
     let html = '';
-    //사원목록내 모든 사원정보를 HTML로 구성하기
+
     for (let index = 0; index <= 재고목록.length - 1; index++) {
         let info = 재고목록[index];
         html += `<tr>
@@ -153,13 +150,11 @@ function 재고출력() {
                     <td> ${ info.도서개수 } </td>
                     <td> ${ info.입고날짜 } </td>
                     <td> 
-                        <button onclick="도서수정(${info.도서번호})" type="button" >수정</button>
-                        <button onclick ="도서삭제(${info.도서번호})" type="button">삭제</butoon>
+                        <button onclick="재고수정(${info.도서번호})" type="button" >수정</button>
+                        <button onclick ="재고삭제(${info.도서번호})" type="button">삭제</butoon>
                     </td>
                 </tr>`
     }
-
-    //3. 출력
     tbody.innerHTML = html
 
 }
@@ -180,10 +175,75 @@ function 재고등록() {
     재고출력();
  
  }
-function 재고수정() {
+ 
+ function 재고수정(도서번호) {
+    let 재고정보 = null;
+    for(let index =0;index<=재고목록.length-1;index++){
+
+        let info=재고목록[index];
+        if(info.도서번호 == 도서번호){
+            재고정보 = info;
+            break;
+        }
+       
+    }
+    if(재고정보==null){
+        alert('검색도서가 없습니다.');
+       
+    }
+    
+    let div = document.querySelector('#재고수정');
+    console.log(div);
+
+
+    let html =  `
+    <h3>재고 수정</h3>
+    <form>
+    <div>
+        도서개수 <input id="bookCount" type="text" value="${재고정보.도서개수}" /><br/>
+        입고날짜 <input id="bookDay" type="text" value="${재고정보.입고날짜}" /><br/>
+        <button onclick="재고수정2(${재고정보.도서번호})" type="button" style="  background-color: black;
+    color: #ffff;
+    border: 3px solid black;
+    margin-left : 165px;
+    margin-top: 10px;">재고수정</button>
+    </div>
+        </form>`;
+        console.log(html)
+
+    div.innerHTML = html
+    재고출력();
+
+   
 
 }
-function 재고삭제() {
+function 재고수정2(클릭된도서번호){
+    let bookNum=document.querySelector('.bookNum').value;
+    let bookCount=document.querySelector('.bookCount').value;
+    let bookDay=document.querySelector('.bookDay').value;
+
+    let 수정도서 ={
+        도서번호 : bookNum,
+        도서개수 : bookCount,
+        입고날짜 : bookDay
+    }
+    for(let index =0;index<=도서목록.length-1;index++){
+        if(재고목록[index].도서번호==클릭된도서번호){
+            재고목록[index]=수정도서;
+            break;
+        }
+    }
+    재고출력();
+
+    
 
 }
-
+function 재고삭제(삭제재고목록){
+    for( let index = 0; index <= 재고목록.length-1; index++){
+        if(재고목록[index].도서번호 == 삭제재고목록){
+            재고목록.splice(index, 1);
+            break;
+        }
+    }
+    재고출력();
+}

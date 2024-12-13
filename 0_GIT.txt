@@ -48,3 +48,20 @@
     9. [Branch]항목에서
         [None][Save] ---> [main][/root][save]
     10. 1~2분 기다리기 : 새로고침 -> Your site live at https://xxxxx.gitbub.io/xxxx
+
+[ 로컬저장소(pc), 원격저장소(gitHub server) ]
+    https://github.com/Ryuyena0305/ryu2024_front ( 원격 저장소 ) : 깃허브 회사의 서버실에 코드 저장
+    - clone(복제)  : 원격 저장소로 부터 로컬 저장소로 가져오는 행위
+    - commit(완료) : 로컬 저장소로부터 코드를 저장 행위
+    - push : 로컬 저장소로 부터 완료(commit)된 코드들을 원격으로 올리기/업로드 행위
+
+---현재 강의에서의 gitHub구조
+
+    git회사PC
+        원격저장소 : https://github.com/Ryuyena0305/ryu2024_front
+    학원의 내PC 
+        로컬저장소 : ryu2024_front
+
+[ 버전 관리 ] VCS
+    12/12 3:02
+    

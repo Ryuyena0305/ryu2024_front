@@ -33,8 +33,4 @@ function getBoard(bno){
     return null;//조회할 게시물번호와 일치한 게시물 객체 못찾음
 
 }
-//4. localStorage에  특정한 게시물1개 삭제 함수
-function deleteBoard(bno){
-    let boardList = getBoardList();
-
-}
+//4. localStorage에  특정한 게시물1개 삭제
